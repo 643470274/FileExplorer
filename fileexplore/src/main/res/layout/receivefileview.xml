@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_purple">
+
+        <Button
+            android:text="接收"
+            android:id="@+id/button_ReceFile"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_marginBottom="80dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/button_refileGoback"
+            android:background="@drawable/back_button" />
+
+        <TextView
+            android:text="FileName"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ReceFileName"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:singleLine="true"
+            android:ellipsize="middle" />
+
+        <TextView
+            android:text="FileSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ReceFileSize"
+            android:textSize="18sp"
+            android:textColor="@color/textColorHint"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp" />
+
+        <TextView
+            android:text="alreadyReceSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alReceFileSize"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="50dp"
+            android:textColor="@android:color/background_light"
+            android:textSize="36sp" />
+    </FrameLayout>
+</LinearLayout>

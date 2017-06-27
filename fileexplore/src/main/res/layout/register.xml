@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <Button
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:id="@+id/button_back_login"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/back_button"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:text="注册"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:layout_alignBottom="@+id/button_back_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="47dp"
+        android:id="@+id/re_username"
+        android:background="@drawable/user_pwd"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:hint="用户名" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/re_password"
+        android:layout_below="@+id/re_username"
+        android:layout_alignLeft="@+id/re_username"
+        android:layout_alignStart="@+id/re_username"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/user_pwd"
+        android:hint="密码" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/re_confirmpwd"
+        android:layout_below="@+id/re_password"
+        android:layout_alignLeft="@+id/re_password"
+        android:layout_alignStart="@+id/re_password"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/user_pwd"
+        android:hint="确认密码" />
+
+    <Button
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:id="@+id/button_submit"
+        android:layout_below="@+id/re_confirmpwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:background="@drawable/button_submit" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/progress"
+        android:id="@+id/register_progress"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignRight="@+id/button_submit"
+        android:layout_alignEnd="@+id/button_submit"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>

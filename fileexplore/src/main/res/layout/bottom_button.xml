@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/button_delete_bottom"
+            android:background="@drawable/button_delete_bottom"
+            android:layout_weight="1"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/button_all_select_bottom"
+            android:background="@drawable/button_all_select_bottom"
+            android:layout_weight="1"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/button_reverse_select_bottom"
+            android:background="@drawable/button_reverse_select_bottom"
+            android:layout_weight="1"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+    </FrameLayout>
+
+</LinearLayout>

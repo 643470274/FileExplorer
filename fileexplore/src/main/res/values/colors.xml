@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#aa66cc</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#ff89b1</color>
+    <color name="touming">#00aa66cc</color>
+    <color name="cursor">#3d3d3d</color>
+    <color name="textColorHint">#88ffffff</color>
+    <color name="ButtonTextColor">#88000000</color>
+    <color name="WillSendView">#00c614</color>
+    <color name="AlwaysSendView">#ffd000</color>
+</resources>

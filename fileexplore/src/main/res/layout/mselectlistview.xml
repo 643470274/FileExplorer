@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mselectlistview">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/holo_purple"
+            android:layout_height="70dp">
+
+            <TextView
+                android:text="位置"
+                android:layout_width="258dp"
+                android:id="@+id/selsect_title"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textColor="@android:color/background_light"
+                android:gravity="center_horizontal"
+                android:ellipsize="middle"
+                android:textSize="14sp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/button_back"
+                android:textColor="@android:color/background_light"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/back_button"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/select"
+                android:clickable="true"
+                android:divider="@drawable/divider" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_bottom"
+                android:layout_gravity="bottom"
+                android:fitsSystemWindows="true"
+                android:visibility="invisible">
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bottom_button"
+                    android:id="@+id/bottom_button" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="384dp"
+        android:background="@android:color/holo_purple">
+
+        <TextView
+            android:text="fileName"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/FileName"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:focusable="true" />
+
+        <TextView
+            android:text="filesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/FileSize"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:textColor="@color/textColorHint"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/SendSpeed"
+            android:textSize="@android:dimen/notification_large_icon_height"
+            android:textColor="@android:color/background_light"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_sendfileGoBack"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_button"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SendProgress" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/WillSendView">
+
+                <TextView
+                    android:text="WillSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/WillSend"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/AlwaysSendView">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/AlwaysSend"
+                    android:text="AlwaysSend"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

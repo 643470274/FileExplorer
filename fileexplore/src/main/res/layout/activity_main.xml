@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="com.example.fileexplore.MainActivity"
+    android:theme="@style/Base.DialogWindowTitle.AppCompat"
+    android:fitsSystemWindows="false">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:id="@+id/top"
+                android:background="@android:color/holo_purple"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="false">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:fitsSystemWindows="false"
+                    android:id="@+id/text_first"
+                    android:gravity="top|center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="头部"
+                    android:paddingTop="20dp"
+                    android:textColor="@android:color/background_light"
+                    android:alpha="0.7" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Liner_search"
+                    android:gravity="center_vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/editText"
+                            android:hint="搜索"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:background="@drawable/edit_text_search_normal_light"
+                            android:textColorHint="?attr/colorControlNormal"
+                            android:layout_below="@+id/text_first"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/button_search"
+                            android:layout_weight="1"
+                            android:cursorVisible="true"
+                            android:textColor="@android:color/background_dark" />
+
+                        <Button
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/clear"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:visibility="invisible"
+                            android:onClick="clear"
+                            android:background="@android:drawable/ic_delete" />
+                    </FrameLayout>
+
+                    <Button
+                        android:text="搜索"
+                        android:id="@+id/button_search"
+                        android:background="@drawable/button_background"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_alignBottom="@+id/editText"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="1"
+                        android:layout_width="50dp"
+                        android:layout_height="45dp"
+                        android:textColor="@color/ButtonTextColor"
+                        android:onClick="search" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Linear_tools"
+                    android:layout_alignTop="@+id/button_search"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <Button
+                        android:text="刷新"
+                        android:id="@+id/show_all_button"
+                        android:background="@drawable/button_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editText"
+                        android:layout_weight="1"
+                        android:textColor="@color/ButtonTextColor"
+                        android:onClick="showall"
+                        style="@style/Widget.AppCompat.Button.Borderless" />
+
+                    <Button
+                        android:text="上一页"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/previous_button"
+                        android:background="@drawable/button_background"
+                        android:layout_width="wrap_content"
+                        android:layout_alignBaseline="@+id/show_all_button"
+                        android:layout_alignBottom="@+id/show_all_button"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="1"
+                        android:onClick="previous"
+                        android:textColor="@color/ButtonTextColor"
+                        style="@style/Widget.AppCompat.Button.Borderless" />
+
+                    <Button
+                        android:text="接收的文件"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/system_file"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background"
+                        android:textColor="@color/ButtonTextColor" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="此处显示路径"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/previous_button"
+                    android:id="@+id/path_textView"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    android:textColor="@android:color/background_light"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/content_list"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:divider="@drawable/divider"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fitsSystemWindows="false" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="注销"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:layout_marginBottom="140dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_gravity="bottom|right" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/button_exit"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="90dp"
+                    android:background="@drawable/button_exit"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/new_install_notification"
+                    android:id="@+id/new_notification" />
+
+                <Button
+                    android:id="@+id/button_notice"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_loolnoticebackground"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
